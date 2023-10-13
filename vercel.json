@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "public": true,
+    "name": "PostYourBiz7",
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/api" }
+    ],
+    "functions": {
+      "api/index.js": {
+        "includeFiles": "dist/PostYourBiz7/browser/**"
+      }
+    }
+  }
