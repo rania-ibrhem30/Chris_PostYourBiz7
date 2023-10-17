@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Shared/home/home.component';
 
 const routes: Routes = [
-  
+  {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   { path: 'listing', loadChildren: () => import('./listing/listing.module').then(m => m.ListingModule) },
   { path: 'posting', loadChildren: () => import('./posting/posting.module').then(m => m.PostingModule) },

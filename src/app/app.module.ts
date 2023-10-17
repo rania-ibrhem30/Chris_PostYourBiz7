@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './Shared/home/home.component';
+import { PrimengModule } from './primeng/primeng.module';
+import { FormsModule } from '@angular/forms';
  
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { HomeComponent } from './Shared/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PrimengModule,FormsModule
     
   ],
   providers: [],
