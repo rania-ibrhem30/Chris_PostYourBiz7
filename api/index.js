@@ -1,3 +1,3 @@
-const server = require('../dist/post-your-biz7/server/main');
+const server = require('../dist/PostYourBiz7/server/main');
 
 module.exports = server.app();
