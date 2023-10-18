@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DropdownModule } from 'primeng/dropdown';
 import { TagModule } from 'primeng/tag';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    DropdownModule,
-    TagModule
-  ]
+      CommonModule,
+
+    ],
+    exports:[
+      TagModule,
+      SidebarModule,
+      ButtonModule,
+      DropdownModule,
+    ]
+
 })
 export class PrimengModule { }

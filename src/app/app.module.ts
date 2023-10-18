@@ -2,22 +2,20 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './Shared/navbar/navbar.component';
-import { FooterComponent } from './Shared/footer/footer.component';
-import { HomeComponent } from './Shared/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrimengModule } from './primeng/primeng.module';
+import { SharedcomponentModule } from './sharedcomponent/sharedcomponent.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent, 
-    FooterComponent,
-    HomeComponent,
+    
+  
   ],
   imports: [
     BrowserModule,
@@ -28,14 +26,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ButtonModule,
     DropdownModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PrimengModule,
+    SharedcomponentModule
     
   ],
   providers: [],
   exports:[
-    NavbarComponent,
-    HomeComponent,
-    FooterComponent
+   
   ],
   bootstrap: [AppComponent]
 })

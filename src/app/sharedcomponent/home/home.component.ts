@@ -1,12 +1,13 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { SharedServiceService } from '../shared/shared-service.service';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None
+
 })
 export class HomeComponent {
   categoriesName:string|any
@@ -14,7 +15,7 @@ export class HomeComponent {
   formGroup: FormGroup | undefined;
   loading: boolean = false;
 
-  constructor( public service:SharedServiceService){
+  constructor( public service:ServiceService){
 
   }
   ngOnInit(): void {
@@ -91,5 +92,5 @@ export class HomeComponent {
           this.loading = false
       }, 2000);
   }
-   
+
 }

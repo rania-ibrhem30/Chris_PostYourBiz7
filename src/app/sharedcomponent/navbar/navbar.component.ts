@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { SharedServiceService } from '../shared/shared-service.service';
+import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -32,7 +32,7 @@ export class NavbarComponent {
    first = 0; 
    rows = 2; 
 
-  constructor(public service:SharedServiceService , private router:Router){
+  constructor(public service:ServiceService , private router:Router){
   }
  
  
