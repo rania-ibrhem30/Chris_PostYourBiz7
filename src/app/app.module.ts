@@ -11,6 +11,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Footer } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent, 
     FooterComponent,
     HomeComponent,
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -35,6 +34,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [],
   exports:[
+    NavbarComponent,
+    HomeComponent,
+    FooterComponent
   ],
   bootstrap: [AppComponent]
 })
