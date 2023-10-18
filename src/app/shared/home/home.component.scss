@@ -50,8 +50,6 @@
     }
 
 }
-
-
 .Explore {
     .container {
         .three-box {
@@ -80,14 +78,32 @@
         }
     }
 }
-
-
-
-
 .p-tag-value {
     width: 77px;
     height: 21px;
     align-items: center;
     justify-content: center;
     display: flex;
+}
+@media (max-width: 767px) {
+    .header{
+        .container{
+            .fliter{
+                display: none !important;
+            }
+        }
+    }
+    
+   
+  
+}
+@media (min-width:768px) and (max-width:1400px) {
+    .header{
+        .container{
+            .fliter{
+                display: none !important;
+            }
+        }
+    }
+   
 }
