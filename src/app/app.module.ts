@@ -5,21 +5,32 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './Shared/navbar/navbar.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { HomeComponent } from './Shared/home/home.component';
-import { PrimengModule } from './primeng/primeng.module';
-import { FormsModule } from '@angular/forms';
- 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TagModule } from 'primeng/tag';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent, 
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PrimengModule,FormsModule
+    FormsModule,
+    TagModule,
+    SidebarModule,
+    ButtonModule,
+    DropdownModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],

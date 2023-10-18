@@ -9,5 +9,10 @@ export class SharedServiceService {
     state: new FormControl<string | null>(null),
     categoriesName:new FormControl<string | null>(null)
   });
+  filterbodynav: FormGroup = new FormGroup({
+    state: new FormControl<string | null>(null),
+    categoriesName:new FormControl<string | null>(null)
+  });
+  
   constructor() { }
 }

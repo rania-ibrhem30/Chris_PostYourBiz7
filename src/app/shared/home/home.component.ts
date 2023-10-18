@@ -1,16 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { SharedServiceService } from '../shared/shared-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
   categoriesName:string|any
   StatesName: string | any;
   formGroup: FormGroup | undefined;
+  loading: boolean = false;
+
   constructor( public service:SharedServiceService){
 
   }
@@ -76,10 +79,17 @@ export class HomeComponent {
   
     
     
-  
-   
+ 
     
     
   
     }
+    load(){
+      this.loading = true;
+
+      setTimeout(() => {
+          this.loading = false
+      }, 2000);
+  }
+   
 }
