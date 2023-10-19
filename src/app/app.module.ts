@@ -28,7 +28,9 @@ import { SharedcomponentModule } from './sharedcomponent/sharedcomponent.module'
     ReactiveFormsModule,
     BrowserAnimationsModule,
     PrimengModule,
-    SharedcomponentModule
+    SharedcomponentModule,
+     
+    
     
   ],
   providers: [],

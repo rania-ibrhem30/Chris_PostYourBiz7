@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     SharedcomponentRoutingModule,
     PrimengModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   exports:[
     NavbarComponent,

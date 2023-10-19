@@ -4,7 +4,9 @@ import { TagModule } from 'primeng/tag';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
-
+import { CardModule } from 'primeng/card';
+import { TabViewModule } from 'primeng/tabview';
+import { GalleriaModule } from 'primeng/galleria';
 
 @NgModule({
   declarations: [],
@@ -17,6 +19,9 @@ import { DropdownModule } from 'primeng/dropdown';
       SidebarModule,
       ButtonModule,
       DropdownModule,
+      CardModule,
+      TabViewModule,
+      GalleriaModule
     ]
 
 })
