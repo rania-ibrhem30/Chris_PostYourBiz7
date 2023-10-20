@@ -1,3 +1,17 @@
-<app-navbar  *ngIf="auth"></app-navbar>
-<router-outlet></router-outlet>
-<app-footer  *ngIf="auth"></app-footer>
+
+
+<main class="page-container">
+
+    <div class="content-container">
+        <nav *ngIf="auth">
+            <app-navbar></app-navbar>
+        </nav>
+        <section>
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+    <footer *ngIf="auth" class="footer">
+        <app-footer></app-footer>
+    </footer>
+    </main>
+    
