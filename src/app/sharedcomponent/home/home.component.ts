@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ServiceService } from '../service.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,9 @@ export class HomeComponent {
   StatesName: string | any;
   formGroup: FormGroup | undefined;
   loading: boolean = false;
+  arrayData:any[]=[]
 
-  constructor( public service:ServiceService){
+  constructor( public service:ServiceService , private router:Router, public routeing:ActivatedRoute){
 
   }
   ngOnInit(): void {
@@ -79,7 +81,14 @@ export class HomeComponent {
     ];
   
     
-    
+     
+  this.routeing.queryParams.subscribe(params => {
+    if (params && params['arrayData']) {
+      this.arrayData = JSON.parse(params['arrayData']);
+      console.log(this.arrayData);
+      
+    }
+  })
  
     
     
