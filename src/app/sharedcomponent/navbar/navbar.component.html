@@ -3,10 +3,10 @@
      <div class="row align-items-center justify-content-center">
          <div class="col-5">
              <ul class="d-flex gap-5 list-unstyled m-0">
-                 <li>Home</li>
-                 <li>Listing</li>
+                 <li routerLink="/home">Home</li>
+                 <li routerLink="/listing">Listing</li>
                  <li  routerLink="/posting">Posting</li>
-                 <li>Buy & sell</li>
+                 <li routerLink="buysell">Buy & sell</li>
              </ul>
          </div>
          <div class="col-5">
@@ -82,16 +82,16 @@
      <div>
        <ul class="navbar-nav  me-auto mb-2 mb-lg-0  text-center">
          <li class="nav-item  justify-content-center align-items-center d-flex">
-           <a class="nav-link py-4" routerLink="home" routerLinkActive="bg" >Home</a>
+           <a class="nav-link py-4" routerLink="/home" routerLinkActive="bg" >Home</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link py-4" routerLink=""  routerLinkActive="bg" >Listing</a>
+           <a class="nav-link py-4" routerLink="/listing"  routerLinkActive="bg" >Listing</a>
          </li>
          <li class="nav-item">
            <a class="nav-link py-4"  routerLink="/posting" routerLinkActive="bg" >Posting</a>
          </li>
          <li class="nav-item">
-            <a class="nav-link py-4"  routerLinkActive="bg" >Buy & Sell </a>
+            <a class="nav-link py-4"  routerLinkActive="bg" routerLink="/buysell" >Buy & Sell </a>
          </li>
        
        </ul>
