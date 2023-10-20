@@ -7,6 +7,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { CardModule } from 'primeng/card';
 import { TabViewModule } from 'primeng/tabview';
 import { GalleriaModule } from 'primeng/galleria';
+import { PasswordModule } from 'primeng/password';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   declarations: [],
@@ -21,7 +23,9 @@ import { GalleriaModule } from 'primeng/galleria';
       DropdownModule,
       CardModule,
       TabViewModule,
-      GalleriaModule
+      GalleriaModule,
+      PasswordModule,
+      InputTextareaModule
     ]
 
 })

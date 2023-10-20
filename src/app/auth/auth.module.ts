@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { PrimengModule } from '../primeng/primeng.module';
 
 
 @NgModule({
@@ -17,11 +18,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     RegisterComponent,
     ResetpasswordComponent,
     ForgetpasswordComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    PrimengModule
   ]
 })
 export class AuthModule { }
