@@ -22,6 +22,7 @@ export class ListingService {
   GetListingByID(id:any){
     return this._http.get(`${environment.BACKEND_DOMAIN}/get-business/${id}`);
   }
+ 
   fliterListing(dynamicBody:any = {state:this.filterbody.value.state.name}){
     // let body ={
     //   state:this.filterbody.value.state.name,

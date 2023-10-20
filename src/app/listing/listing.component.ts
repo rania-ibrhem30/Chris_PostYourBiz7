@@ -17,6 +17,8 @@ export class ListingComponent {
   searcharray: any[] = [];
   cities: any[] | undefined;
   categories: any[] | undefined;
+  // categoriesName: string | any
+  citiesName: string | any;
   StatesName: any[] | undefined;
   state: string | any;
   formGroup: FormGroup | undefined;
@@ -29,7 +31,6 @@ export class ListingComponent {
   searchQuery: string = '';
   arrayData: any;
   loading:boolean = false
-
 
 
 
@@ -51,8 +52,6 @@ export class ListingComponent {
       this.fliterarray = res.body; 
       this.data = this.fliterarray;
       this.loader = false
-
-
       console.log(this.fliterarray)
 
 
@@ -62,6 +61,15 @@ export class ListingComponent {
   }
   onPageChange(event: any): void {
     this.first = event.first;
+  }
+  onSearch(): void {
+    if (this.searchQuery.trim() === '') {
+      this.searcharray = this.data;
+    } else {
+      this.searcharray = this.data.filter((item:any) =>
+        item.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    }
   }
 
   ngOnInit(): void {
@@ -127,6 +135,7 @@ export class ListingComponent {
     ;
    ;
    this._router.queryParams.subscribe(params => {
+      // console.log(params)
       if(Object.keys(params).length) {
         this.service.fliterListing(params).subscribe(res => {
           this.data=res.body
@@ -138,15 +147,6 @@ export class ListingComponent {
 
    })
   }
-  ngDoCheck(): void {
-
-  }
-  load(){
-    this.loading = true;
-
-    setTimeout(() => {
-        this.loading = false
-    }, 2000);
-}
+ 
 
 }

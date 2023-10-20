@@ -20,6 +20,14 @@ export class HomeComponent {
   constructor( public service:ServiceService , private router:Router, public routeing:ActivatedRoute){
 
   }
+  filterlistingBIZ() {
+    console.log(this.service.filterbodyhome.value)
+    this.router.navigate(['/listing'], {
+      queryParams: {
+        state:this.service.filterbodyhome.value.state.name,
+        cities:this.service.filterbodyhome.value.state.code
+      }});
+  }
   ngOnInit(): void {
     this.StatesName = [
       { name: "All", cities: "AL" },
@@ -81,25 +89,19 @@ export class HomeComponent {
     ];
   
     
-     
-  this.routeing.queryParams.subscribe(params => {
-    if (params && params['arrayData']) {
-      this.arrayData = JSON.parse(params['arrayData']);
-      console.log(this.arrayData);
-      
-    }
-  })
- 
+    this.routeing.queryParams.subscribe(params => {
+      if (params && params['arrayData']) {
+        this.arrayData = JSON.parse(params['arrayData']);
+        console.log(this.arrayData);
+        
+      }
+    })
+    
+  
+   
     
     
   
     }
-    load(){
-      this.loading = true;
-
-      setTimeout(() => {
-          this.loading = false
-      }, 2000);
-  }
 
 }

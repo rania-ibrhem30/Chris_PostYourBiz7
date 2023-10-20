@@ -3,7 +3,8 @@
     <div class="d-flex justify-content-center align-items-start py-5 gap-3 fliter d-lg-block d-md-none">
       <form [formGroup]="service.filterbodyhome" class="gap-3 d-flex">
         <p-dropdown [options]="" optionlabel="name" placeholder="Listings"></p-dropdown>
-        <p-dropdown formControlName="state" [options]="StatesName" optionLabel="name" placeholder="State">
+          <p-dropdown formControlName="state" [options]="StatesName" optionLabel="name" placeholder="State">
+
         </p-dropdown>
         <p-dropdown [options]="categories" optionLabel="name" placeholder="Category"></p-dropdown>
         <input type="text" pInputText placeholder="    Zip Code" />
