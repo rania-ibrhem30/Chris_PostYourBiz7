@@ -38,7 +38,7 @@ export class NavbarComponent {
  
   fliterlistingBIZ(){
     console.log(this.service.filterbodyhome.value)
-    this.router.navigate(['/Listings'], {
+    this.router.navigate(['/listing'], {
       queryParams: {
         state:this.service.filterbodynav.value.state.name,
         cities:this.service.filterbodynav.value.state.code
