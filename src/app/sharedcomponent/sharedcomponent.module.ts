@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
+    TermsConditionsComponent,
   ],
   imports: [
     CommonModule,

@@ -69,8 +69,8 @@
           <div class="row d-flex align-items-start justify-content-start">
             <div class="col-md-8" style="height: fit-content">
               <div class="row gap-4 justify-content-center align-items-center">
-                <div class="col-md-3" *ngFor="let item of data">
-                  <p-card header="" [style]="{ width: '220px' }" >
+                <div class="col-md-3 col-10" *ngFor="let item of data">
+                  <p-card header="" >
                     <ng-template pTemplate="header">
                         <img alt="Card" src="{{item.logo}}"  width="300" height="200"/>
                     </ng-template>
