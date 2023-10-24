@@ -31,4 +31,12 @@ export class ListingService {
       observe: 'response',
     })
   }
+  getpostsbusinessID(id:any){
+    let body={
+      id:id,
+      website_name:'post-your-biz1.vercel.app'
+
+    }
+    return this._http.post(`${environment.BACKEND_DOMAIN}/get-posts-by-businessID/`,body);
+  }
 }

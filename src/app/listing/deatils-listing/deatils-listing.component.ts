@@ -22,6 +22,7 @@ export class DeatilsListingComponent {
   galleryphotosmobile : string[] = [];
   data:any[]=[];
   itemId:any;
+  posts:any[]=[];
 
   constructor(private service:ListingService, private route:ActivatedRoute) {
       this.id = route.snapshot.paramMap.get('id');
@@ -73,6 +74,12 @@ export class DeatilsListingComponent {
           console.log(this.galleryphotos);
       });
   }
+  getPosts(id:number){
+     this.service.getpostsbusinessID(id).subscribe((res:any)=>{
+        this.posts=res.data;
+        console.log("rania",this.posts)
+     })
+  }
 
   responsiveOptions : any[] = [
       {
@@ -102,7 +109,7 @@ export class DeatilsListingComponent {
      this.route.params.subscribe((params:any) =>{
       console.log(params )
      this.getdetalisId(params.id);
-
+      this.getPosts(this.id)
    })
 
   }
