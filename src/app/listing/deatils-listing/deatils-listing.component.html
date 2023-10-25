@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row py-2">
         <div class="col-md-8" *ngIf="datainfo">
-             <h3>{{datainfo.name}}</h3>
+             <h3 class="py-3">{{datainfo.name}}</h3>
              <p-galleria [value]="imgs" [numVisible]="5" [circular]="true" [showItemNavigators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item" width="100%" height="500" />
@@ -176,7 +176,7 @@
             </div>
         </div>
         <div class="col-md-4 col-12">
-            <img src="../../../assets/img/listing/map.png" alt="" class="w-100">
+            <img src="../../../assets/img/listing/map.png" alt="" class="w-100" style="margin-top: 4.5rem!important;">
         </div>
     </div>
 </div>
