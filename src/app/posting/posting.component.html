@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-            <div class="row justify-content-strat align-items-center d-flex gap-3 py-3 p-0">
+            <div class="row justify-content-center align-items-center d-flex gap-3 py-3 p-0">
                 <div class="col-md-3 col-12" *ngFor="let item of postingarray">
                         <div class="card justify-content-between align-items-center d-flex">
                             <img src="{{ item.business.logo}}" alt="" class="w-100 img-fluid object-fit-fill border rounded photo">
@@ -73,8 +73,8 @@
       
         </div>
         <div>
-          <!-- <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows"
-            [totalRecords]="postingarray.length"></p-paginator> -->
+          <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows"
+            [totalRecords]="postingarray.length"></p-paginator>
         </div>
       </div>
     </div>

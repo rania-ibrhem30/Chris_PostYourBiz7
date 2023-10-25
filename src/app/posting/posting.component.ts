@@ -8,6 +8,8 @@ import { PostingService } from './posting.service';
 })
 export class PostingComponent {
   postingarray:any[]=[]
+  first = 0; 
+  rows = 20; 
   constructor(public service:PostingService){
   }
 
@@ -23,9 +25,9 @@ export class PostingComponent {
   }
 
   
-  // onPageChange(event: any): void {
-  //   this.first = event.first;
-  // }
+  onPageChange(event: any): void {
+    this.first = event.first;
+  }
 
  
   ngOnInit(): void {

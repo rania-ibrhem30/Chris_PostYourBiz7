@@ -9,6 +9,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { GalleriaModule } from 'primeng/galleria';
 import { PasswordModule } from 'primeng/password';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   declarations: [],
@@ -25,7 +26,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
       TabViewModule,
       GalleriaModule,
       PasswordModule,
-      InputTextareaModule
+      InputTextareaModule,
+      PaginatorModule
     ]
 
 })
