@@ -1,13 +1,13 @@
 <section class="listing py-5">
   <div class="container">
-    <div class="d-flex justify-content-center align-items-start py-5 gap-3 fliter d-lg-block d-md-none">
+    <div class="d-flex justify-content-center align-items-center py-5 gap-5 fliter d-lg-block d-md-none">
       <form [formGroup]="service.filterbody" class="gap-3 d-flex">
         <p-dropdown [options]="" optionlabel="name" placeholder="Listings"></p-dropdown>
           <p-dropdown formControlName="state" [options]="StatesName" optionLabel="name" placeholder="State">
 
         </p-dropdown>
         <p-dropdown [options]="categories" optionLabel="name" placeholder="Category"></p-dropdown>
-        <input type="text" pInputText placeholder="    Zip Code" />
+        
         <p-button label="Search"  (onClick)="fliterlistingBIZ()" ></p-button>
       </form>
     </div>
